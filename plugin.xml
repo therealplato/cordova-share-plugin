@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plato's fork of yoik's work at https://github.com/yoik/cordova-yoik-intent-filter -->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.therealplato.cordova.plugins.intentfilter"
+        version="0.0.1">
+
+  <name>Android plaintext Intent filter</name>
+
+  <description>
+    Andoid app can respond to any plaintext
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="AndroidManifest.xml" parent="/*/application/activity">
+      <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="text/plain" />
+      </intent-filter>
+    </config-file>
+  </platform>
+
+</plugin>
