@@ -12,11 +12,16 @@
     Andoid app can respond to any plaintext
   </description>
 
+  <author>yoik, therealplato</author>
+
   <license>MIT</license>
 
   <engines>
-    <engine name="cordova" version=">=3.0.0"/>
+    <engine name="cordova" version=">=3.5.0"/>
   </engines>
+
+  <js-module src="www/handleShareIntent.js" name="HandleShareIntent">
+  </js-module>
 
   <!-- android -->
   <platform name="android">
